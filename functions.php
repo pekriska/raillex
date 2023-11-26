@@ -49,7 +49,7 @@ function raillex_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'primary-menu' => esc_html__( 'Primary', 'raillex' ),
+			'menu-1' => esc_html__( 'Primary', 'raillex' ),
 		)
 	);
 
