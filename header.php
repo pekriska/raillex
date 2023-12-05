@@ -46,17 +46,27 @@
                     <p class="site-description"><?php echo $raillex_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
                 <?php endif; ?>
             </div>
+
+			<div class="site-header-burger burger">
+				<button class="hamburger hamburger--spin menu-toggle" type="button">
+					<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+					</span>
+				</button>
+			</div>
+
+			<div class="site-header-primary-nav wrapp">
+				<nav id="site-navigation" class="main-navigation">
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'menu_class' => 'menu-items',
+					) );
+					?>			
+				</nav><!-- #site-navigation -->
+			</div>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation wrapper">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'raillex' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+		
 	</header><!-- #masthead -->

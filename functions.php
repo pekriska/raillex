@@ -465,6 +465,15 @@ function raillex_scripts() {
 	wp_enqueue_style( 'raillex-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'raillex-style', 'rtl', 'replace' );
 
+	wp_enqueue_script('jquery');
+    if (!is_admin()) {
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', get_template_directory_uri() . '/js/jquery-2.2.4.min.js', '2.2.4', false);
+        wp_enqueue_script('jquery');
+    }
+
+	wp_enqueue_style( 'hamburgers', get_stylesheet_directory_uri() . '/css/hamburgers.css' );
+
 	wp_enqueue_script( 'raillex-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
