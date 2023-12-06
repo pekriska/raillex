@@ -17,8 +17,13 @@ get_header();
 
 	<main id="primary" class="site-main clearfix">
 
+    <div class="entry-content">
+        <header>
+            <p class="page-sub-title">— Novinky —</p>
+			<h1 class="page-title"><?php single_post_title(); ?></h1>
+		</header>
 		<?php
-		while ( have_posts() ) :
+        while ( have_posts() ) :
 			the_post();
 
 			get_template_part( 'template-parts/content', get_post_type() );
@@ -30,7 +35,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-
+	</div><!-- .entry-content -->
 	</main><!-- #main -->
 
 <?php
