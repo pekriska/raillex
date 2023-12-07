@@ -2,7 +2,7 @@ $ = jQuery.noConflict(true);
 
 $(document).ready( function () {
 
-var breakpoint = 860;
+var breakpoint = 950;
 
 if ($(document).width() <= breakpoint){
   $("#primary-menu").css("display","none");
@@ -29,7 +29,7 @@ if ($(document).width() <= breakpoint){
   $(window).resize(function () {
     
     if ($(document).width() > breakpoint){
-      $("#primary-menu").css("display","block");
+      $("#primary-menu").css("display","flex");
 		}else{
       $("#primary-menu").css("display","none");
       $('.menu-toggle').removeClass("is-active");
