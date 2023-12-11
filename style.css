@@ -1019,6 +1019,7 @@ textarea {
 	line-height: 1;
 	margin: 0;
 	letter-spacing: -2px;
+	text-wrap: balance;
 }
 .page-sub-title{
 	color: #9B9D9F;
@@ -1324,7 +1325,7 @@ p.hero-title a{
 		margin-bottom: 20px;
 	}
 	.site-header{
-		height: 80px;
+		height: 100px;
 	}
 	.site-logo{
 		float: left;
